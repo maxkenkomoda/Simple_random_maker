@@ -1,0 +1,23 @@
+<h1>らんだむちゃん<h1>
+<%= form_with(model: @newword, local: true) do |f| %>
+  <%= f.label :content, '候補を入力してください' %>
+  <%= f.text_field :content %>
+  
+  <%= f.submit '投稿' %>
+<% end %>
+
+<h2>現在の候補</h2>
+
+
+
+<ul>
+  <% @allwords.each do |words| %>
+    <li>
+      <ul><%= words.content %> : <%= link_to '削除', "/words/#{words.id}", method: :delete %></ul>
+    </li>
+    
+  <% end %>
+</ul>
+
+<%= link_to 'ランダム', "/words/random" %>
+
