@@ -1,2 +1,11 @@
-<p><%= @random_word %></p>
+<div class="title">
+  <p>今回は・・・・・・</p>
+</div>
+<div class="main"> 
+  <%= @random_word.content %>
+</div>
+<div class="title2">
+  <p>・・・・・・にしましょう！</p>
+</div>
+
 <%= link_to 'トップに戻る', root_path %>
