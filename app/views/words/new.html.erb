@@ -1,23 +1,39 @@
-<h1>らんだむちゃん<h1>
-<%= form_with(model: @newword, local: true) do |f| %>
-  <%= f.label :content, '候補を入力してください' %>
-  <%= f.text_field :content %>
+<div class="text-center m-5">
+  <h1>らんだむちゃん<h1>
+</div>
+
+
+<div class="row">
+  <div class="form-group col-sm-8 offset-2">
+  <%= form_with(model: @newword, local: true) do |f| %>
+    <%= f.label :content, '候補を入力してください' %>
+    <%= f.text_field :content, class: 'form-control' %>
+  </div>
+    <%= f.submit '投稿', class: 'btn btn-primary col-sm-8 offset-sm-2 mb-5' %>
+    <% end %>
+</div>
+
   
-  <%= f.submit '投稿' %>
-<% end %>
+  
 
-<h2>現在の候補</h2>
+<div class="text-center">
+  <h2>現在の候補</h2>
+</div>
 
 
 
-<ul>
-  <% @allwords.each do |words| %>
-    <li>
-      <ul><%= words.content %> : <%= link_to '削除', "/words/#{words.id}", method: :delete %></ul>
-    </li>
-    
-  <% end %>
-</ul>
+<div class="row-1">
+  <div class="col-sm-8 offset-2">
+    <% @allwords.each do |words| %>
+      <ul>
+        <li><%= words.content %> : <%= link_to '削除', "/words/#{words.id}", method: :delete, class: "btn btn-danger btn-sm" %></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to 'ランダム', "/words/random" %>
+
+<div class="row">
+  <%= link_to 'ランダム', "/words/random", class: 'btn btn-dark btn-lg col-sm-8 offset-2' %>
+</div>
 

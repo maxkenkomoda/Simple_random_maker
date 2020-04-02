@@ -1,11 +1,12 @@
-<div class="title">
-  <p>今回は・・・・・・</p>
+<div class="title text-center">
+  <h1>今回は・・・・・・</h1>
+  <div class="main"> 
+    <%= @random_word.content %>
+  </div>
+  <div class="title2">
+    <h2>・・・・・・にしましょう！</h2>
+  </div>
 </div>
-<div class="main"> 
-  <%= @random_word.content %>
+<div class="row">
+  <%= link_to 'トップに戻る', root_path, class: 'btn btn-success col-sm-8 offset-2 mt-5' %>
 </div>
-<div class="title2">
-  <p>・・・・・・にしましょう！</p>
-</div>
-
-<%= link_to 'トップに戻る', root_path %>
