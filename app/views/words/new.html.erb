@@ -1,5 +1,6 @@
 <div class="text-center m-5">
-  <h1>らんだむちゃん<h1>
+  <h1>ランダムちゃんβ<h1>
+  <h2>〜選ぶのめんどくさいあなたに〜</h2>  
 </div>
 
 
@@ -7,7 +8,7 @@
   <div class="form-group col-sm-8 offset-2">
   <%= form_with(model: @newword, local: true) do |f| %>
     <%= f.label :content, '候補を入力してください' %>
-    <%= f.text_field :content, class: 'form-control' %>
+    <%= f.text_field :content, class: 'form-control', placeholder: "例:ビール" %>
   </div>
     <%= f.submit '投稿', class: 'btn btn-primary col-sm-8 offset-sm-2 mb-5' %>
     <% end %>
@@ -33,7 +34,8 @@
 </div>
 
 
+<% unless @allwords.empty? %>
 <div class="row">
   <%= link_to 'ランダム', "/words/random", class: 'btn btn-dark btn-lg col-sm-8 offset-2' %>
 </div>
-
+<% end %>
