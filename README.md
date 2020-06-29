@@ -1,27 +1,18 @@
 # README
+ランダムジェネレーターです。
+Ruby on Railsの簡単なアウトプットとして、ランダムジェネレーターの簡易版を作成しました。
+候補を入力して、ランダムボタンを押すとランダムで１つの候補が選択されます。
+毎日なんのお茶を飲むか決めるのがめんどくさいのでつくりました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
 * Rails version
 5.2.2
 
 * Ruby version
 2.5.3
 
-* System dependencies
-
-* Configuration
-
 * Database creation
 MySQL
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
+Heroku
 * ...
