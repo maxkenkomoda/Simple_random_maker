@@ -3,6 +3,9 @@
 Ruby on Railsの簡単なアウトプットとして、ランダムジェネレーターの簡易版を作成しました。  
 候補を入力して、ランダムボタンを押すとランダムで１つの候補が選択されます。  
 毎日なんのお茶を飲むか決めるのがめんどくさいのでつくりました。  
+![Raddom](https://user-images.githubusercontent.com/58941838/89103073-1dbfd100-d44a-11ea-9983-29b40f3f17e1.gif)
+
+
 ### URLは[こちら](https://random-chan.herokuapp.com/)
 
 
